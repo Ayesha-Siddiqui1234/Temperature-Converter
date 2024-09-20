@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(162, 225, 204);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Left and right images */
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.grid-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Middle text styling */
+.grid-item.text {
+    padding: 40px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px; /* Set max-width to avoid over-expanding */
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack items in a single column */
+    }
+
+    .grid-item img {
+        max-width: 80%; /* Reduce image size on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .grid-item.text {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    input, select, button {
+        max-width: 100%; /* Ensure form elements are responsive */
+    }
+}

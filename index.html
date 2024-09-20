@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Left side image (25%) -->
+        <div class="grid-item">
+            <img src="./c1.jpg" alt="Left Image">
+        </div>
+
+        <!-- Middle text (50%) -->
+        <div class="grid-item text">
+           <h1>Temperature Converter</h1>
+           <br><br>
+           <label>Enter the temperature to convert:</label>
+           <input type="number" id="inputtaking" placeholder="Enter temperature">
+           <select id="selection">
+               <option value="celsius">Celsius</option>
+               <option value="far">Fahrenheit</option>
+           </select>
+           <button onclick="tempconverter()">Submit</button>
+           <div id="result"></div> <!-- This is where the result will show -->
+        </div>
+
+        <!-- Right side image (25%) -->
+        <div class="grid-item">
+            <img src="./f.jpg" alt="Right Image">
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
